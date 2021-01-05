@@ -1,11 +1,11 @@
 <template>
-  <div></div>
+    <div>test</div>
 </template>
 
 <script>
-
+console.log('noticelist');
 export default {
-  name: 'Home',
+  name: 'NoticeList',
 };
 </script>
 
