@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+a {text-decoration:none;color:#3f4f5f;}
+a:hover {text-decoration:underline;color:#D90404;}
+
+
+.btn {display:inline-block;padding:10px 20px;color:#fff;border:none;cursor:pointer;font-size:16px;border-radius:2px;}
+.btn-small {font-size:.85em;padding:7px 12px;height:34px;}
+.btnWrap {text-align:right;margin-top:30px;}
+.btnWrap.center {text-align:center;}
+
+.btn-primary        {background: #F18229;}
+.btn-primary:hover  {background: #d2972a;}
+.btn-secondary      {background: #EDD569;}
+.btn-search         {background: #458955;}
+.btn-default        {background:#888;}
+
+/* form */
+.inputWrap label {display:inline-block;margin-right:30px;}
+.form-control {display:block;width:100%;border:1px solid #ccc;padding:6px 12px;border-radius:2px;font-size:16px;height:34px;}
+textarea.form-control {height:auto;}
+.form-vertical {background:#f4f4f4;margin:0 100px;padding:50px 160px 50px 0;}
+.form-vertical .form-group {display:flex;margin-bottom:30px;}
+.form-vertical .form-group .control-label {flex-basis:50%;text-align:right;margin-right:10px;padding-top:6px;color:#888;}
+.form-vertical .form-group>div {flex:1;}
+.form-control-static {padding-top:6px;}
+.badgeWrap {padding-top:4px;}
+.checkboxWrap label {display:inline-block;margin-right:20px;}
+
+/* text */
+.text-left      {text-align:left !important;}
+.text-center    {text-align:center !important;}
+.text-right     {text-align:right !important;}
+.text-danger    {color:#D90404;}
+.text-warning   {color:#d2972a;}
+.text-info      {color:#027abc;}
+.text-success   {color:#458955;}
+
+/* table */
+table {width:100%;border-collapse:collapse;border-top:2px solid #ccc;}
+table th,table td {padding:10px 15px;border-bottom:1px solid #ddd;}
+table.table-horizontal th {text-align:right;color:#555;background:#f9f9f9;}
+table.table-horizontal td {text-align:left;border-left:1px solid #ddd;}
+table.table-vertical th {text-align:center;background:#f9f9f9;}
+table.table-vertical td {text-align:center;}
+
+/* table top */
+.listSearch {padding-bottom:10px;text-align:right;}
+.listSearch select {display:inline-block;width:100px;}
+.listSearch input {display:inline-block;width:200px;}
+.listSearch .btn {}
+
+/* paginate */
+.paginate {text-align:center;padding:30px 0;}
+.paginate li {display:inline-block;}
+.paginate li a {display:block;padding:5px 10px;}
+.paginate li span {display:block;padding:5px 10px;color:#aaa;}
+
+/* noImage */
+.noImage {display:block;width:100%;background:#f4f4f4;border:1px solid #ccc;padding:100px 0;text-align:center;margin-bottom:20px;}
+
+
+/* badge */
+.badge {display:inline-block;padding:3px 20px 5px;border-radius:100px;font-size:.85em;color:#fff;margin-right:10px;}
+.badge-primary {background:#027abc;}
+
+.calendarWrap h4 {font-size:30px;text-align:center;font-weight:700;}
+.calendarWrap .yearSelect {text-align:right;margin-bottom:10px;}
+.calendarWrap .yearSelect select {display:inline-block;width:100px;}
+.calendarWrap .day {display:flex;border-top:1px solid #ccc;border-left:1px solid #ccc;}
+.calendarWrap .day li {flex:0 0 14.2857%;text-align:center;padding:10px;border-bottom:none;border-right:1px solid #ccc;}
+.calendarWrap .day li.sunday {color:#D90404;}
+.calendarWrap .day li.saturday {color:#027abc;}
+.calendarWrap .date {display:flex;flex-wrap:wrap;border-top:1px solid #ccc;border-left:1px solid #ccc;}
+.calendarWrap .date li {flex:0 0 14.2857%;border-bottom:1px solid #ccc;border-right:1px solid #ccc;text-align:right;padding:10px;height:120px;}
+.calendarWrap .date li span {color:#AAA;}
+.calendarWrap .date .plane {font-size:.8em;padding:0 4px 2px;margin:2px;text-align:left;color:#fff;border-radius:2px;}
+.calendarWrap .date .plane.plane-primary {background: #027abc;}
