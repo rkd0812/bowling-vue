@@ -1,6 +1,6 @@
 <template>
   <div>
-    <sub-title title="공지사항"></sub-title>
+    <sub-title title="자유게시판"></sub-title>
     <section>
       <table-search></table-search>
       <table class="table-vertical">
@@ -24,7 +24,7 @@
         <tr>
           <td>45</td>
           <td class="text-left">
-              <router-link to="/community/notice/detail">갈마볼링장 레인 정비시간 안내</router-link>
+              <router-link to="/community/freeboard/detail">갈마볼링장 레인 정비시간 안내</router-link>
           </td>
           <td>2020-11-25</td>
           <td>관리자</td>
@@ -117,7 +117,7 @@ import Paginate from '@/components/paginate.vue';
 import ButtonWrap from '@/components/ButtonWrap.vue';
 
 export default {
-  name: 'NoticeList',
+  name: 'FreeList',
   components: {
     Paginate,
     SubTitle,

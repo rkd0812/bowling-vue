@@ -1,6 +1,6 @@
 <template>
   <div>
-    <sub-title title="공지사항"></sub-title>
+    <sub-title title="자유게시판"></sub-title>
     <section>
       <div class="contents_header">
         <div class="titleWrap">
@@ -8,7 +8,7 @@
           <h3>실업 볼링팀, 대통령기 전국볼링대회 개인전 金</h3>
         </div>
         <div class="authorWrap">
-          <span class="author">관리자</span>
+          <span class="author">홍길동</span>
           <span class="date">2020-11-25</span>
           <span class="hit">15</span>
         </div>
@@ -36,7 +36,7 @@ import SubTitle from '@/components/SubTitle.vue';
 import ButtonWrap from '@/components/ButtonWrap.vue';
 
 export default {
-  name: 'NoticeDetail',
+  name: 'FreeDetail',
   components: {
     ButtonWrap,
     SubTitle,

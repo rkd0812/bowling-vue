@@ -1,24 +1,23 @@
 <template>
   <div>
-    <h2>자유게시판</h2>
-    <div class="listSearch">
-      <select class="form-control">
-        <option>제목</option>
-        <option>작성자</option>
-        <option>제목 + 작성자</option>
-      </select>
-      <input type="text" class="form-control">
-      <button class="btn btn-search btn-small"><i class="fa fa-search"></i></button>
-    </div>
+    <h2>{{ title }}</h2>
   </div>
 </template>
 
 <script>
 export default {
   name: 'SubTitle',
+  props: {
+    title: String,
+  },
 };
 </script>
 
 <style scoped>
-
+.container h2 {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 30px 0;
+  border-bottom: 1px solid #ccc;
+}
 </style>
