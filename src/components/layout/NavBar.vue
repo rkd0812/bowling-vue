@@ -53,4 +53,85 @@ export default {
 
 <style scoped>
 
+header {
+  background-color: #3F628F;
+  padding: 30px 0 20px;
+}
+
+header .branding {
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+header .gnb {
+  text-align: center;
+  padding-top: 20px;
+}
+
+header .gnb ul.depth_first > li {
+  position: relative;
+  display: inline-block;
+}
+
+header .gnb ul.depth_first > li > a {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+header .gnb ul.depth_first > li > a:hover {
+  color: #F18229;
+  text-decoration: none;
+}
+
+header .gnb ul.depth_first > li > a:after {
+  position: relative;
+  top: -5px;
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 100px;
+  background: #fff;
+  opacity: .5;
+  margin-left: 20px;
+}
+
+header .gnb ul.depth_first > li:last-child a:after {
+  display: none;
+}
+
+header .gnb ul.depth_first > li:hover > ul.depth_second {
+  display: block;
+}
+
+header .gnb ul.depth_second {
+  display: none;
+  position: absolute;
+  width: 140px;
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+header .gnb ul.depth_second > li > a {
+  display: block;
+  text-align: left;
+  color: #3f4f5f;
+  padding: 10px;
+}
+
+header .gnb ul.depth_second > li > a:hover {
+  background: #F2B441;
+  color: #fff;
+  text-decoration: none;
+}
+
 </style>

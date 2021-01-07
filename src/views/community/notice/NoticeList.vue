@@ -1,7 +1,8 @@
 <template>
   <div>
-    <sub-title></sub-title>
+    <sub-title title="공지사항"></sub-title>
     <section>
+      <table-search></table-search>
       <table class="table-vertical">
         <colgroup>
           <col width="60px">
@@ -22,7 +23,9 @@
         <tbody>
         <tr>
           <td>45</td>
-          <td class="text-left"><a href="board-detail.html">갈마볼링장 레인 정비시간 안내</a></td>
+          <td class="text-left">
+              <router-link to="/community/notice/detail">갈마볼링장 레인 정비시간 안내</router-link>
+          </td>
           <td>2020-11-25</td>
           <td>관리자</td>
           <td>15</td>
@@ -100,26 +103,8 @@
         </tr>
         </tbody>
       </table>
-      <ul class="paginate">
-        <li class="backward">
-          <span><i class="fa fa-angle-double-left"></i></span>
-        </li>
-        <li class="prev"><a href="notice-detail.html">
-          <i class="fa fa-angle-left"></i></a>
-        </li>
-        <li class="on"><a href="notice-detail.html">1</a></li>
-        <li><a href="notice-detail.html">2</a></li>
-        <li><a href="notice-detail.html">3</a></li>
-        <li class="next"><a href="notice-detail.html"><i class="fa fa-angle-right"></i></a></li>
-        <li class="forward">
-          <a href="notice-detail.html">
-            <i class="fa fa-angle-double-right"></i>
-          </a>
-        </li>
-      </ul>
-      <div class="btnWrap">
-        <button class="btn btn-primary" onclick="location.href='board-regist.html'">글등록</button>
-      </div>
+      <paginate></paginate>
+      <button-wrap btn-name="글등록"></button-wrap>
     </section>
   </div>
 
@@ -127,11 +112,17 @@
 
 <script>
 import SubTitle from '@/components/SubTitle.vue';
+import TableSearch from '@/components/TableSearch.vue';
+import Paginate from '@/components/paginate.vue';
+import ButtonWrap from '@/components/ButtonWrap.vue';
 
 export default {
   name: 'NoticeList',
   components: {
+    Paginate,
     SubTitle,
+    TableSearch,
+    ButtonWrap,
   },
 };
 </script>
