@@ -20,17 +20,23 @@
             <li>
               <router-link to="/community/notice/list">공지사항</router-link>
             </li>
-            <li><a href="board-list.html">자유게시판</a></li>
+            <li>
+              <router-link to="/community/freeBoard/list">자유게시판</router-link>
+            </li>
             <li><a href="used-list.html">중고장터</a></li>
             <li><a href="#">대전신청</a></li>
           </ul>
         </li>
         <li><a href="#">마이페이지</a>
           <ul class="depth_second">
-            <li><a href="#">나의 계정</a></li>
+            <li>
+              <router-link to="/mypage/account/myaccount">나의 계정</router-link>
+            </li>
             <li><a href="#">나의 스코어</a></li>
             <li><a href="#">게임관리</a></li>
-            <li><a href="my-calendar.html">일정관리</a></li>
+            <li>
+              <router-link to="/mypage/schedule/mycalendar">나의 일정</router-link>
+            </li>
           </ul>
         </li>
         <li><a href="#">팀관리</a>
