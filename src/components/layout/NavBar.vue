@@ -14,7 +14,9 @@
             <li><a href="#">볼링장정보</a></li>
           </ul>
         </li>
-        <li><a href="#">명예의전당</a></li>
+        <li>
+          <router-link to="/halloffame/fame/HallOfFame">명예의전당</router-link>
+        </li>
         <li><a href="#">커뮤니티</a>
           <ul class="depth_second">
             <li>
