@@ -9,6 +9,7 @@ import FreeDetail from '../views/community/freeboard/FreeDetail.vue';
 import FreeForm from '../views/community/freeboard/FreeForm.vue';
 import MyAccount from '../views/mypage/account/MyAccount.vue';
 import MyCalendar from '../views/mypage/schedule/MyCalendar.vue';
+import HallOfFame from '../views/halloffame/fame/HallOfFame.vue';
 
 Vue.use(VueRouter);
 
@@ -57,6 +58,11 @@ const routes = [
     path: '/mypage/schedule/mycalendar',
     name: 'mypage',
     component: MyCalendar,
+  },
+  {
+    path: '/halloffame/fame/HallOfFame',
+    name: 'HallOfFame',
+    component: HallOfFame,
   },
 ];
 

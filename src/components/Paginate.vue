@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: 'paginate',
+  name: 'Paginate',
 };
 </script>
 

@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: 'TableTop',
+  name: 'TableSearch',
 };
 </script>
 

@@ -113,7 +113,7 @@
 <script>
 import SubTitle from '@/components/SubTitle.vue';
 import TableSearch from '@/components/TableSearch.vue';
-import Paginate from '@/components/paginate.vue';
+import Paginate from '@/components/Paginate.vue';
 import ButtonWrap from '@/components/ButtonWrap.vue';
 
 export default {
