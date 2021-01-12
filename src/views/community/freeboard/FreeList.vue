@@ -104,7 +104,9 @@
         </tbody>
       </table>
       <paginate></paginate>
-      <button-wrap btn-name="글등록"></button-wrap>
+      <button-wrap>
+        <button class="btn btn-primary"><i class="fa fa-check"></i> 글등록</button>
+      </button-wrap>
     </section>
   </div>
 

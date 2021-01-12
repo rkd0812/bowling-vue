@@ -1,8 +1,12 @@
 <template>
   <header>
     <h1 class="branding">
-      <i class="fa fa-bowling-ball">
-      </i> BOWLING CLUB </h1>
+      <i class="fa fa-bowling-ball"></i> BOWLING CLUB
+    </h1>
+    <div class="global">
+      <router-link to="/members/Login"><i class="fa fa-sign-in"></i> 로그인</router-link>
+      <router-link to="/members/Join"><i class="fa fa-user-plus"></i> 회원가입</router-link>
+    </div>
     <div class="gnb">
       <ul class="depth_first">
         <li><a href="#">볼링</a>
@@ -62,6 +66,7 @@ export default {
 <style scoped>
 
 header {
+  position:relative;
   background-color: #3F628F;
   padding: 30px 0 20px;
 }
@@ -73,7 +78,25 @@ header .branding {
   text-align: center;
   padding: 20px 0;
 }
-
+header .global {
+  position:absolute;
+  left:50%;
+  width:1000px;
+  margin-left:-500px;
+  top:20px;
+  text-align:right;
+  opacity:.5;
+}
+header .global a {
+  display:inline-block;
+  margin-left:20px;
+  color:#fff;
+  font-size:14px;
+}
+header .global a i {
+  display:inline-block;
+  margin-right:5px;
+}
 header .gnb {
   text-align: center;
   padding-top: 20px;

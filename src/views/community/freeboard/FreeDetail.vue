@@ -26,7 +26,11 @@
           치룰수 있는 다목적 체육관으로 국내 최고시설을 자랑한다.
         </div>
       </div>
-      <button-wrap btn-name="목록"></button-wrap>
+      <button-wrap>
+        <button class="btn btn-primary" onclick="location.href='list'">
+          <i class="fa fa-list"></i> 목록
+        </button>
+      </button-wrap>
     </section>
   </div>
 </template>

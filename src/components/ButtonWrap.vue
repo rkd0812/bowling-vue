@@ -1,18 +1,10 @@
 <template>
   <div class="btnWrap">
-    <button class="btn btn-primary">
-      <router-link to="/community/notice/detail">{{ btnName }}</router-link>
-    </button>
+    <slot></slot>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'ButtonWrap',
-  props: {
-    btnName: String,
-  },
-};
 </script>
 
 <style scoped>
