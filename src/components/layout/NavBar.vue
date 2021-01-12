@@ -67,7 +67,7 @@ export default {
 
 header {
   position:relative;
-  background-color: #3F628F;
+  background: linear-gradient(90deg, #145ee2 0%, #00a595 100%);
   padding: 30px 0 20px;
 }
 
@@ -147,9 +147,10 @@ header .gnb ul.depth_second {
   width: 140px;
   background: #fff;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #3F628F;
   border-radius: 10px;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  z-index:10;
 }
 
 header .gnb ul.depth_second > li > a {
