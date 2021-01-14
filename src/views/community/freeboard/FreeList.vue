@@ -105,7 +105,7 @@
       </table>
       <paginate></paginate>
       <button-wrap>
-        <button class="btn btn-primary"><i class="fa fa-check"></i> 글등록</button>
+        <button class="btn btn-primary" @click="goPage()"><i class="fa fa-check"></i> 글등록</button>
       </button-wrap>
     </section>
   </div>
@@ -125,6 +125,11 @@ export default {
     SubTitle,
     TableSearch,
     ButtonWrap,
+  },
+  methods: {
+    goPage() {
+      this.$router.push('/community/freeboard/form');
+    },
   },
 };
 </script>

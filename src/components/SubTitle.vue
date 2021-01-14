@@ -18,6 +18,6 @@ export default {
   font-size: 24px;
   font-weight: bold;
   padding: 30px 0;
-  border-bottom: 1px solid #ccc;
+  /*border-bottom: 1px solid #ccc;*/
 }
 </style>

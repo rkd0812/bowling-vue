@@ -24,27 +24,15 @@
         <div class="panel">
           <div class="panel-header">
             <strong>명예의전당</strong>
-            <a href="#">more +</a>
+            <router-link to="/halloffame/fame/HallOfFame">more +</router-link>
           </div>
           <div class="panel-body">
             <ul class="rank">
-              <li>
+              <li v-for="(rank, idx) in ranking" :key="idx">
                 <i class="fa fa-trophy text-danger"></i>
-                <strong>1위</strong>
-                <div class="score">719</div>
-                <span>김일등</span>
-              </li>
-              <li>
-                <i class="fa fa-medal text-warning"></i>
-                <strong>2위</strong>
-                <div class="score">699</div>
-                <span>이이등</span>
-              </li>
-              <li>
-                <i class="fa fa-award text-success"></i>
-                <strong>3위</strong>
-                <div class="score">680</div>
-                <span>최삼등</span>
+                <strong>{{ rank.rankNumber }}</strong>
+                <div class="score">{{  rank.score }}</div>
+                <span>{{ rank.playerName }}</span>
               </li>
             </ul>
           </div>
@@ -54,7 +42,7 @@
         <div class="panel team">
           <div class="panel-header">
             <strong>나의 팀</strong>
-            <a href="#">more +</a>
+            <router-link to="/halloffame/fame/HallOfFame">more +</router-link>
           </div>
           <div class="panel-body">
             <h2>볼링블링</h2>
@@ -79,7 +67,7 @@
         <div class="panel">
           <div class="panel-header">
             <strong>공지사항</strong>
-            <a href="#">more +</a>
+            <router-link to="/community/notice/list">more +</router-link>
           </div>
           <div class="panel-body">
             <ul class="board">
@@ -111,7 +99,7 @@
         <div class="panel">
           <div class="panel-header">
             <strong>자유게시판</strong>
-            <a href="#">more +</a>
+            <router-link to="/community/freeboard/list">more +</router-link>
           </div>
           <div class="panel-body">
             <ul class="board">
@@ -131,6 +119,27 @@
 <script>
 export default {
   name: 'Home',
+  data() {
+    return {
+      ranking: [
+        {
+          rankNumber: '1위',
+          score: 719,
+          playerName: '김일등',
+        },
+        {
+          rankNumber: '2위',
+          score: 698,
+          playerName: '이이등',
+        },
+        {
+          rankNumber: '3위',
+          score: 680,
+          playerName: '최삼등',
+        },
+      ],
+    };
+  },
 };
 </script>
 

@@ -27,7 +27,7 @@
         </div>
       </div>
       <button-wrap>
-        <button class="btn btn-primary" onclick="location.href='list'">
+        <button class="btn btn-primary" @click="goPage()">
           <i class="fa fa-list"></i> 목록
         </button>
       </button-wrap>
@@ -44,6 +44,11 @@ export default {
   components: {
     ButtonWrap,
     SubTitle,
+  },
+  methods: {
+    goPage() {
+      this.$router.push('/community/freeboard/list');
+    },
   },
 };
 </script>

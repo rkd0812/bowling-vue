@@ -44,9 +44,9 @@
           </div>
         </div>
       </div>
-      <div class="btnWrap center">
-        <button class="btn btn-primary">비밀번호 수정</button>
-      </div>
+      <button-wrap class="text-center">
+        <button class="btn btn-primary"><i class="fa fa-check"></i> 비밀번호 수정</button>
+      </button-wrap>
     </section>
   </div>
 
@@ -54,11 +54,13 @@
 
 <script>
 import SubTitle from '@/components/SubTitle.vue';
+import ButtonWrap from '@/components/ButtonWrap.vue';
 
 export default {
   name: 'MyAccount',
   components: {
     SubTitle,
+    ButtonWrap,
   },
 };
 </script>

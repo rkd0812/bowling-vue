@@ -27,7 +27,9 @@
         </div>
       </div>
       <button-wrap>
-        <button class="btn btn-primary"><i class="fa fa-list"> 목록</i></button>
+        <button class="btn btn-primary" @click="goPage()">
+          <i class="fa fa-list"> 목록</i>
+        </button>
       </button-wrap>
     </section>
   </div>
@@ -42,6 +44,11 @@ export default {
   components: {
     ButtonWrap,
     SubTitle,
+  },
+  methods: {
+    goPage() {
+      this.$router.push('/community/notice/list');
+    },
   },
 };
 </script>

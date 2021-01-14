@@ -1,7 +1,7 @@
 <template>
   <header>
     <h1 class="branding">
-      <i class="fa fa-bowling-ball"></i> BOWLING CLUB
+      <i class="fa fa-bowling-ball"></i> <router-link to="/">BOWLING CLUB</router-link>
     </h1>
     <div class="global">
       <router-link to="/members/Login"><i class="fa fa-sign-in"></i> 로그인</router-link>
@@ -78,6 +78,15 @@ header .branding {
   text-align: center;
   padding: 20px 0;
 }
+header .branding a {
+  color: #fff;
+}
+header .branding a:focus {
+  outline:none;
+}
+header .branding a:hover {
+  text-decoration:none;
+}
 header .global {
   position:absolute;
   left:50%;
@@ -116,7 +125,7 @@ header .gnb ul.depth_first > li > a {
 }
 
 header .gnb ul.depth_first > li > a:hover {
-  color: #F18229;
+  opacity:.5;
   text-decoration: none;
 }
 

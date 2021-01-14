@@ -5,7 +5,7 @@
 a {text-decoration:none;color:#3f4f5f;}
 a:hover {text-decoration:underline;color:#D90404;}
 
-section {padding: 40px 0 80px;}
+section {padding: 20px 0 80px;}
 h1 {font-size:30px;font-weight:700;}
 h2 {font-size:26px;font-weight:700;}
 h3 {font-size:22px;font-weight:700;margin-bottom:30px;}
@@ -45,6 +45,7 @@ h4 {font-size:18px;font-weight:700;margin-bottom:20px;}
 textarea.form-control {height:auto;}
 .form-vertical {background:#f4f4f4;}
 .form-vertical .form-group {display:flex;margin-bottom:30px;}
+.form-vertical .form-group:last-child {margin-bottom:0;}
 .form-vertical .form-group .control-label {text-align:right;margin-right:10px;padding-top:6px;color:#888;}
 .form-vertical .form-group>div {flex:1;}
 .form-control-static {padding-top:6px;}
