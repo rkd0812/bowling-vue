@@ -1,6 +1,6 @@
 <template>
   <div>
-    <sub-title title="공지사항"></sub-title>
+    <sub-title title="대전신청"></sub-title>
     <section>
       <table-search></table-search>
       <table class="table-vertical">
@@ -24,22 +24,21 @@
         <tr>
           <td>45</td>
           <td class="text-left">
-              <router-link to="/community/notice/detail">갈마볼링장 레인 정비시간 안내</router-link>
-          </td>
+            <router-link to="/community/war/detail">갈마볼링장 2021 신년맞이 팀전</router-link>
           <td>2020-11-25</td>
           <td>관리자</td>
           <td>15</td>
         </tr>
         <tr>
           <td>44</td>
-          <td class="text-left"><a href="board-detail.html">12월 프리덤 전 상품 안내</a></td>
+          <td class="text-left"><a href="war-detail.html">12월 프리덤 전 상품 안내</a></td>
           <td>2020-11-25</td>
           <td>1팀장</td>
           <td>24</td>
         </tr>
         <tr>
           <td>43</td>
-          <td class="text-left"><a href="board-detail.html">12월 프리덤 전 일정 안내</a></td>
+          <td class="text-left"><a href="war-detail.html">12월 프리덤 전 일정 안내</a></td>
           <td>2020-11-25</td>
           <td>관리자</td>
           <td>66</td>
@@ -47,9 +46,7 @@
         <tr>
           <td>42</td>
           <td class="text-left">
-            <a href="board-detail.html">
-              “락볼링장서 영감” 에피치오, UX디자인 IoT 포켓볼 기기 개발 - 매일경제
-            </a>
+            <a href="war-detail.html">“락볼링장서 영감” 에피치오, UX디자인 IoT 포켓볼 기기 개발 - 매일경제</a>
           </td>
           <td>2020-11-25</td>
           <td>55팀장</td>
@@ -57,28 +54,28 @@
         </tr>
         <tr>
           <td>41</td>
-          <td class="text-left"><a href="board-detail.html">실업 볼링팀, 대통령기 전국볼링대회 개인전 金</a></td>
+          <td class="text-left"><a href="war-detail.html">실업 볼링팀, 대통령기 전국볼링대회 개인전 金</a></td>
           <td>2020-11-25</td>
           <td>관리자</td>
           <td>17</td>
         </tr>
         <tr>
           <td>40</td>
-          <td class="text-left"><a href="board-detail.html">야간 이벤트 안내</a></td>
+          <td class="text-left"><a href="war-detail.html">야간 이벤트 안내</a></td>
           <td>2020-11-25</td>
           <td>++팀장</td>
           <td>15</td>
         </tr>
         <tr>
           <td>39</td>
-          <td class="text-left"><a href="board-detail.html">11월 프리덤 전 상품 안내</a></td>
+          <td class="text-left"><a href="war-detail.html">11월 프리덤 전 상품 안내</a></td>
           <td>2020-11-25</td>
           <td>관리자</td>
           <td>33</td>
         </tr>
         <tr>
           <td>38</td>
-          <td class="text-left"><a href="board-detail.html">11월 프리덤 전 일정 안내</a></td>
+          <td class="text-left"><a href="war-detail.html">11월 프리덤 전 일정 안내</a></td>
           <td>2020-11-25</td>
           <td>관리자</td>
           <td>48</td>
@@ -86,9 +83,7 @@
         <tr>
           <td>37</td>
           <td class="text-left">
-            <a href="board-detail.html">
-              “락볼링장서 영감” 에피치오, UX디자인 IoT 포켓볼 기기 개발 - 매일경제
-            </a>
+            <a href="war-detail.html">“락볼링장서 영감” 에피치오, UX디자인 IoT 포켓볼 기기 개발 - 매일경제</a>
           </td>
           <td>2020-11-25</td>
           <td>관리자</td>
@@ -96,7 +91,7 @@
         </tr>
         <tr>
           <td>36</td>
-          <td class="text-left"><a href="board-detail.html">실업 볼링팀, 대통령기 전국볼링대회 개인전 金</a></td>
+          <td class="text-left"><a href="war-detail.html">실업 볼링팀, 대통령기 전국볼링대회 개인전 金</a></td>
           <td>2020-11-25</td>
           <td>**팀장</td>
           <td>26</td>
@@ -116,7 +111,7 @@ import Paginate from '@/components/Paginate.vue';
 import ButtonWrap from '@/components/ButtonWrap.vue';
 
 export default {
-  name: 'NoticeList',
+  name: 'WarList',
   components: {
     Paginate,
     SubTitle,
