@@ -10,6 +10,16 @@ import FreeForm from '../views/community/freeboard/FreeForm.vue';
 import MyAccount from '../views/mypage/account/MyAccount.vue';
 import MyCalendar from '../views/mypage/schedule/MyCalendar.vue';
 import HallOfFame from '../views/halloffame/fame/HallOfFame.vue';
+import WarDetail from '../views/community/war/WarDetail.vue';
+import WarForm from '../views/community/war/WarForm.vue';
+import WarList from '../views/community/war/WarList.vue';
+import UsedDetail from '../views/community/used/UsedDetail.vue';
+import UsedForm from '../views/community/used/UsedForm.vue';
+import UsedList from '../views/community/used/UsedList.vue';
+import GalleryDetail from '../views/bowling/gallery/GalleryDetail.vue';
+import GalleryForm from '../views/bowling/gallery/GalleryForm.vue';
+import GalleryList from '../views/bowling/gallery/GalleryList.vue';
+import AlleyList from '../views/bowling/alley/AlleyList.vue';
 
 Vue.use(VueRouter);
 
@@ -50,6 +60,36 @@ const routes = [
     component: FreeForm,
   },
   {
+    path: '/community/used/list',
+    name: 'Used',
+    component: UsedList,
+  },
+  {
+    path: '/community/used/detail',
+    name: 'Used',
+    component: UsedDetail,
+  },
+  {
+    path: '/community/used/form',
+    name: 'War',
+    component: UsedForm,
+  },
+  {
+    path: '/community/war/list',
+    name: 'War',
+    component: WarList,
+  },
+  {
+    path: '/community/war/detail',
+    name: 'War',
+    component: WarDetail,
+  },
+  {
+    path: '/community/war/form',
+    name: 'War',
+    component: WarForm,
+  },
+  {
     path: '/mypage/account/myaccount',
     name: 'mypage',
     component: MyAccount,
@@ -63,6 +103,26 @@ const routes = [
     path: '/halloffame/fame/HallOfFame',
     name: 'HallOfFame',
     component: HallOfFame,
+  },
+  {
+    path: '/bowling/gallery/list',
+    name: 'Gallery',
+    component: GalleryList,
+  },
+  {
+    path: '/bowling/gallery/detail',
+    name: 'Gallery',
+    component: GalleryDetail,
+  },
+  {
+    path: '/bowling/gallery/form',
+    name: 'Gallery',
+    component: GalleryForm,
+  },
+  {
+    path: '/bowling/alley/list',
+    name: 'Alley',
+    component: AlleyList,
   },
 ];
 

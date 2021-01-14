@@ -1,5 +1,5 @@
 <template>
-  <sub-title title="자유게시판"></sub-title>
+ <div>
   <section>
     <div class="inputWrap">
       <table class="table-horizontal">
@@ -41,6 +41,7 @@
       <button class="btn btn-primary" onclick="location.href='board-list.html'">등록</button>
     </div>
   </section>
+ </div>
 </template>
 
 <script>

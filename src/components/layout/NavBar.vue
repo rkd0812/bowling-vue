@@ -10,8 +10,12 @@
             <li>
               <router-link to="">볼링지식</router-link>
             </li>
-            <li><a href="#">볼링영상</a></li>
-            <li><a href="#">볼링장정보</a></li>
+            <li>
+              <router-link to="/bowling/gallery/list">볼링영상</router-link>
+            </li>
+            <li>
+              <router-link to="/bowling/alley/list">볼링장정보</router-link>
+            </li>
           </ul>
         </li>
         <li>
@@ -25,8 +29,12 @@
             <li>
               <router-link to="/community/freeBoard/list">자유게시판</router-link>
             </li>
-            <li><a href="used-list.html">중고장터</a></li>
-            <li><a href="#">대전신청</a></li>
+            <li>
+              <router-link to="/community/used/list">중고장터</router-link>
+            </li>
+            <li>
+              <router-link to="/community/war/list">대전신청</router-link>
+            </li>
           </ul>
         </li>
         <li><a href="#">마이페이지</a>
