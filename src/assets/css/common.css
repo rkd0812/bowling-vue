@@ -5,7 +5,7 @@
 a {text-decoration:none;color:#3f4f5f;}
 a:hover {text-decoration:underline;color:#D90404;}
 
-section {padding: 40px 0 80px;}
+section {padding: 20px 0 80px;}
 h1 {font-size:30px;font-weight:700;}
 h2 {font-size:26px;font-weight:700;}
 h3 {font-size:22px;font-weight:700;margin-bottom:30px;}
@@ -27,8 +27,9 @@ h4 {font-size:18px;font-weight:700;margin-bottom:20px;}
 .col-12 {flex:0 0 100%;width:100%;}
 .col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12 {padding-left:10px;padding-right:10px;}
 
-.btn {display:inline-block;padding:10px 20px;color:#fff;border:none;cursor:pointer;font-size:16px;border-radius:2px;}
-.btn-small {font-size:.85em;padding:7px 12px;height:34px;}
+.btn {display:inline-block;padding:10px 20px;color:#fff;border:none;cursor:pointer;font-size:16px;border-radius:2px;
+    margin-left:3px;}
+.btn-small {font-size:.85em;padding:7px 12px;height:40px;}
 .btnWrap.center {text-align:center;}
 
 .btn-primary        {background: #F18229;}
@@ -39,10 +40,12 @@ h4 {font-size:18px;font-weight:700;margin-bottom:20px;}
 
 /* form */
 .inputWrap label {display:inline-block;margin-right:30px;}
-.form-control {display:block;width:100%;border:1px solid #ccc;padding:6px 12px;border-radius:2px;font-size:16px;height:34px;margin-right:3px;}
+.form-control {display:block;width:100%;border:1px solid #ccc;padding:6px 12px;border-radius:2px;font-size:16px;
+    font-family:'Noto Sans KR',sans-serif;height:40px;margin-right:3px;}
 textarea.form-control {height:auto;}
 .form-vertical {background:#f4f4f4;}
 .form-vertical .form-group {display:flex;margin-bottom:30px;}
+.form-vertical .form-group:last-child {margin-bottom:0;}
 .form-vertical .form-group .control-label {text-align:right;margin-right:10px;padding-top:6px;color:#888;}
 .form-vertical .form-group>div {flex:1;}
 .form-control-static {padding-top:6px;}
@@ -65,12 +68,6 @@ table.table-horizontal th {text-align:right;color:#555;background:#f9f9f9;}
 table.table-horizontal td {text-align:left;border-left:1px solid #ddd;}
 table.table-vertical th {text-align:center;background:#f9f9f9;}
 table.table-vertical td {text-align:center;}
-
-/* table top */
-.listSearch {padding-bottom:10px;text-align:right;}
-.listSearch select {display:inline-block;width:100px;}
-.listSearch input {display:inline-block;width:200px;}
-.listSearch .btn {}
 
 
 /* noImage */
@@ -111,3 +108,18 @@ table.table-vertical td {text-align:center;}
 .modal-body {padding:40px 20px;}
 .modal-body h4 {font-size:22px;font-weight:700;text-align:center;}
 .modal-footer {padding:20px;border-top:1px solid #ccc;text-align:right;}
+
+/* members */
+
+.form-group .email input {
+    display:inline-block;
+    width:calc(100% / 2 - 15px);
+}
+.form-group .email select {
+    display:inline-block;
+    width:calc(100% / 2 - 14px);
+}
+.form-group .connect input {
+    display:inline-block;
+    width:calc(100% / 3 - 12px);
+}

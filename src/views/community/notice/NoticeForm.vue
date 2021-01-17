@@ -37,17 +37,28 @@
           </tbody>
         </table>
       </div>
-      <div class="btnWrap">
-        <button class="btn btn-default" onclick="location.href='board-list.html'">취소</button>
-        <button class="btn btn-primary" onclick="location.href='board-list.html'">등록</button>
-      </div>
+      <button-wrap>
+        <button class="btn btn-default" onclick="location.href=''">
+          <i class="fa fa-times"></i>  취소
+        </button>
+        <button class="btn btn-primary" onclick="location.href=''">
+          <i class="fa fa-check"></i>  등록
+        </button>
+      </button-wrap>
     </section>
   </div>
 </template>
 
 <script>
+import SubTitle from '@/components/SubTitle.vue';
+import ButtonWrap from '@/components/ButtonWrap.vue';
+
 export default {
   name: 'NoticeForm',
+  components: {
+    SubTitle,
+    ButtonWrap,
+  },
 };
 </script>
 

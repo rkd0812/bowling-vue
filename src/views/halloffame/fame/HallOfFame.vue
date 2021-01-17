@@ -2,118 +2,33 @@
   <div>
     <sub-title title="명예의전당"></sub-title>
     <section>
-      <tabs></tabs>
+      <tabs>
+        <li class="on"><a href="#">전체</a></li>
+        <li><a href="#">퍼펙트</a></li>
+        <li><a href="#">800</a></li>
+        <li><a href="#">700</a></li>
+      </tabs>
       <ul class="listWrap">
-        <li>
+        <li v-for="(fame, idx) in famelist" :key="idx">
           <div class="rankingNumber col-1">
             <i class="fa fa-trophy text-danger"></i>
-            <span>1위</span>
+            <span>{{ fame.rankingNumber }}</span>
           </div>
-          <div class="profile col-1"><span>김</span></div>
+          <div class="profile col-1"><span>{{ fame.profile.avatar }}</span></div>
           <div class="rankTitle">
-            <label>김일등</label>
+            <label>{{ fame.profile.username }}</label>
             <ul class="info">
-              <li>볼링블링팀</li>
-              <li>갈마볼링장</li>
-              <li>2020-12-24</li>
+              <li>{{ fame.profile.info[0] }}</li>
+              <li>{{ fame.profile.info[1] }}</li>
+              <li>{{ fame.profile.info[2] }}</li>
             </ul>
           </div>
           <div class="scoreWrap col-2">
-            <label>714</label>
+            <label>{{ fame.scoreWrap.totalScore }}</label>
             <ul class="score">
-              <li>289</li>
-              <li>234</li>
-              <li>191</li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <div class="rankingNumber col-1">
-            <i class="fa fa-medal text-warning"></i>
-            <span>2위</span>
-          </div>
-          <div class="profile col-1"><span>이</span></div>
-          <div class="rankTitle">
-            <label>이이등</label>
-            <ul class="info">
-              <li>볼링블링팀</li>
-              <li>갈마볼링장</li>
-              <li>2020-12-24</li>
-            </ul>
-          </div>
-          <div class="scoreWrap col-2">
-            <label>714</label>
-            <ul class="score">
-              <li>289</li>
-              <li>234</li>
-              <li>191</li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <div class="rankingNumber col-1">
-            <i class="fa fa-award text-success"></i>
-            <span>3위</span>
-          </div>
-          <div class="profile col-1"><span>최</span></div>
-          <div class="rankTitle">
-            <label>최삼등</label>
-            <ul class="info">
-              <li>볼링블링팀</li>
-              <li>갈마볼링장</li>
-              <li>2020-12-24</li>
-            </ul>
-          </div>
-          <div class="scoreWrap col-2">
-            <label>714</label>
-            <ul class="score">
-              <li>289</li>
-              <li>234</li>
-              <li>191</li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <div class="rankingNumber col-1">
-            <span>4위</span>
-          </div>
-          <div class="profile col-1"><span>박</span></div>
-          <div class="rankTitle">
-            <label>박사등</label>
-            <ul class="info">
-              <li>볼링블링팀</li>
-              <li>갈마볼링장</li>
-              <li>2020-12-24</li>
-            </ul>
-          </div>
-          <div class="scoreWrap col-2">
-            <label>714</label>
-            <ul class="score">
-              <li>289</li>
-              <li>234</li>
-              <li>191</li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <div class="rankingNumber col-1">
-            <span>5위</span>
-          </div>
-          <div class="profile col-1"><span>권</span></div>
-          <div class="rankTitle">
-            <label>권오등</label>
-            <ul class="info">
-              <li>볼링블링팀</li>
-              <li>갈마볼링장</li>
-              <li>2020-12-24</li>
-            </ul>
-          </div>
-          <div class="scoreWrap col-2">
-            <label>714</label>
-            <ul class="score">
-              <li>289</li>
-              <li>234</li>
-              <li>191</li>
+              <li>{{ fame.scoreWrap.score[0] }}</li>
+              <li>{{ fame.scoreWrap.score[1] }}</li>
+              <li>{{ fame.scoreWrap.score[2] }}</li>
             </ul>
           </div>
         </li>
@@ -135,6 +50,48 @@ export default {
     Paginate,
     SubTitle,
     Tabs,
+  },
+  data() {
+    return {
+      famelist: [
+        {
+          rankingNumber: '1위',
+          profile: {
+            avatar: '김',
+            username: '김일등',
+            info: ['볼링블링팀', '갈마볼링장', '2020-12-24'],
+          },
+          scoreWrap: {
+            totalScore: 719,
+            score: [289, 234, 191],
+          },
+        },
+        {
+          rankingNumber: '2위',
+          profile: {
+            avatar: '이',
+            username: '이이등',
+            info: ['볼링블링팀', '갈마볼링장', '2020-12-24'],
+          },
+          scoreWrap: {
+            totalScore: 698,
+            score: [289, 234, 191],
+          },
+        },
+        {
+          rankingNumber: '3위',
+          profile: {
+            avatar: '최',
+            username: '최삼등',
+            info: ['볼링블링팀', '갈마볼링장', '2020-12-24'],
+          },
+          scoreWrap: {
+            totalScore: 680,
+            score: [289, 234, 191],
+          },
+        },
+      ],
+    };
   },
 };
 </script>
