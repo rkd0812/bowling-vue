@@ -1,4 +1,6 @@
 import './assets/css/reset.css';
+import './assets/css/fonts.css';
+import './assets/css/all.css';
 import './assets/css/common.css';
 import './assets/css/layout.css';
 

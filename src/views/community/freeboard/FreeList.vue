@@ -108,6 +108,7 @@
         <button class="btn btn-primary" @click="goPage()"><i class="fa fa-check"></i> 글등록</button>
       </button-wrap>
     </section>
+  <modal class="modal-middle"></modal>
   </div>
 
 </template>
@@ -117,6 +118,7 @@ import SubTitle from '@/components/SubTitle.vue';
 import TableSearch from '@/components/TableSearch.vue';
 import Paginate from '@/components/Paginate.vue';
 import ButtonWrap from '@/components/ButtonWrap.vue';
+import Modal from '@/components/Modal.vue';
 
 export default {
   name: 'FreeList',
@@ -125,6 +127,7 @@ export default {
     SubTitle,
     TableSearch,
     ButtonWrap,
+    Modal,
   },
   methods: {
     goPage() {

@@ -1,8 +1,7 @@
 @charset "utf-8";
-@import url('http://fonts.googleapis.com/earlyaccess/notosanskr.css');
 
 * {box-sizing:border-box;}
-body {font-family: 'Noto Sans KR', sans-serif;font-size:16px;color:#3f4f5f;line-height:1.2em;}
+body {font-family: 'Noto Sans Korean', sans-serif;font-size:16px;color:#3f4f5f;line-height:1.2em;}
 
 
 
@@ -48,3 +47,23 @@ body {font-family: 'Noto Sans KR', sans-serif;font-size:16px;color:#3f4f5f;line-
 .container .thumb li .titleWrap span.author {display:block;font-size:1em;color:#888;}
 .container .thumb li .state {flex-basis:100px;text-align:right;}
 
+
+.panel {
+    border-radius:10px;
+    overflow:hidden;
+    border:2px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    margin-right:10px;
+    margin-bottom:30px;
+}
+.panel .panel-header {
+    position: relative;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    border-bottom:1px solid #ccc;
+}
+.panel .panel-body {
+    padding:10px 20px;
+    height:200px;
+}
