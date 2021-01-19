@@ -1,5 +1,5 @@
 <template>
-  <div class="modal">
+  <div class="modal" :style="`display: ${isOpen?'':'none'}`">
     <div class="modal-dialog">
       <div class="modal-header">
         <h3>대전신청 회원검색</h3>
@@ -25,6 +25,9 @@ import TableVertical from '@/components/TableVertical.vue';
 
 export default {
   name: 'Modal',
+  props: {
+    isOpen: Boolean,
+  },
   components: {
     TableSearch,
     TableVertical,

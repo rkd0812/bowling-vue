@@ -105,10 +105,11 @@
       </table>
       <paginate></paginate>
       <button-wrap>
+        <button class="btn btn-primary" @click="modalOpen()"><i class="fa fa-check"></i> 모달</button>
         <button class="btn btn-primary" @click="goPage()"><i class="fa fa-check"></i> 글등록</button>
       </button-wrap>
     </section>
-  <modal class="modal-middle"></modal>
+  <modal class="modal-middle" :is-open.sync="modalIsOpen"></modal>
   </div>
 
 </template>
@@ -129,9 +130,17 @@ export default {
     ButtonWrap,
     Modal,
   },
+  data() {
+    return {
+      modalIsOpen: false,
+    };
+  },
   methods: {
     goPage() {
       this.$router.push('/community/freeboard/form');
+    },
+    modalOpen() {
+      this.modalIsOpen = !this.modalIsOpen;
     },
   },
 };
