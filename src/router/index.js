@@ -13,6 +13,9 @@ import FreeForm from '../views/community/freeboard/FreeForm.vue';
 import MyAccount from '../views/mypage/account/MyAccount.vue';
 import MyCalendar from '../views/mypage/schedule/MyCalendar.vue';
 import HallOfFame from '../views/halloffame/fame/HallOfFame.vue';
+import TeamFee from '../views/myteam/team/TeamFee.vue';
+import PollList from '../views/myteam/poll/PollList.vue';
+import PollDetail from '../views/myteam/poll/PollDetail.vue';
 
 Vue.use(VueRouter);
 
@@ -78,9 +81,24 @@ const routes = [
     component: MyCalendar,
   },
   {
-    path: '/halloffame/fame/HallOfFame',
+    path: '/halloffame/fame/halloffame',
     name: 'HallOfFame',
     component: HallOfFame,
+  },
+  {
+    path: '/myteam/team/teamfee',
+    name: 'TeamFee',
+    component: TeamFee,
+  },
+  {
+    path: '/myteam/poll/polllist',
+    name: 'PollList',
+    component: PollList,
+  },
+  {
+    path: '/myteam/poll/polldetail',
+    name: 'PollDetail',
+    component: PollDetail,
   },
 ];
 
