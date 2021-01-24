@@ -4,79 +4,31 @@
     <section>
       <table-search></table-search>
       <ul class="thumb">
-        <li>
-          <span class="number">42</span>
-          <div class="thumbnail"><i class="fa fa-file-image"></i></div>
-          <ul class="titleWrap">
-            <li><strong>스타락볼링</strong></li>
-            <li><label class="control-label">전화번호</label><span>042-000-000</span></li>
-            <li>
-              <label class="control-label">주소</label>
-              <span>대전시 서구 갈마로00 00번길
-                                <button class="btn btn-default btn-xs">
-                                    <i class="fa fa-map-marked"></i>
-                                </button>
-                            </span>
-            </li>
-            <li><label class="control-label">레일 수</label><span>20</span></li>
-          </ul>
-          <div class="state star">
-            <div class="starWrap">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-            <div class="starButton">
-              <button class="btn btn-white btn-xs modalCall" name="inputStar">별점주기</button>
-            </div>
+        <li v-for="item in items" :key="item.id">
+          <span class="number">{{ item.number }}</span>
+          <div class="thumbnail">
+            <i class="fa fa-file-image"></i>
           </div>
-        </li>
-        <li>
-          <span class="number">41</span>
-          <div class="thumbnail"><i class="fa fa-file-image"></i></div>
           <ul class="titleWrap">
-            <li><strong>퍼펙트 볼링센타</strong></li>
-            <li><label class="control-label">전화번호</label><span>042-000-000</span></li>
+            <li>
+              <strong>{{ item.alleyName }}</strong>
+            </li>
+            <li>
+              <label class="control-label">전화번호</label>
+              <span>{{ item.phoneNumber }}</span>
+            </li>
             <li>
               <label class="control-label">주소</label>
-              <span>대전시 서구 갈마로00 00번길
+              <span>{{ item.alleyAddress }}
                                 <button class="btn btn-default btn-xs">
                                     <i class="fa fa-map-marked"></i>
                                 </button>
-                            </span>
+              </span>
             </li>
-            <li><label class="control-label">레일 수</label><span>20</span></li>
-          </ul>
-          <div class="state star">
-            <div class="starWrap">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-            <div class="starButton">
-              <button class="btn btn-white btn-xs modalCall" name="inputStar">별점주기</button>
-            </div>
-          </div>
-        </li>
-        <li>
-          <span class="number">40</span>
-          <div class="thumbnail"><i class="fa fa-file-image"></i></div>
-          <ul class="titleWrap">
-            <li><strong>둔산볼링센터</strong></li>
-            <li><label class="control-label">전화번호</label><span>042-000-000</span></li>
             <li>
-              <label class="control-label">주소</label>
-              <span>대전시 서구 갈마로00 00번길
-                                <button class="btn btn-default btn-xs">
-                                    <i class="fa fa-map-marked"></i>
-                                </button>
-                            </span>
+              <label class="control-label">{{ item.railCnt }}</label>
+              <span>20</span>
             </li>
-            <li><label class="control-label">레일 수</label><span>20</span></li>
           </ul>
           <div class="state star">
             <div class="starWrap">
@@ -87,72 +39,38 @@
               <i class="far fa-star"></i>
             </div>
             <div class="starButton">
-              <button class="btn btn-white btn-xs modalCall" name="inputStar">별점주기</button>
-            </div>
-          </div>
-        </li>
-        <li>
-          <span class="number">39</span>
-          <div class="thumbnail"><i class="fa fa-file-image"></i></div>
-          <ul class="titleWrap">
-            <li><strong>에스케이월드볼링</strong></li>
-            <li><label class="control-label">전화번호</label><span>042-000-000</span></li>
-            <li>
-              <label class="control-label">주소</label>
-              <span>대전시 서구 갈마로00 00번길
-                                <button class="btn btn-default btn-xs">
-                                    <i class="fa fa-map-marked"></i>
-                                </button>
-                            </span>
-            </li>
-            <li><label class="control-label">레일 수</label><span>20</span></li>
-          </ul>
-          <div class="state star">
-            <div class="starWrap">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-            <div class="starButton">
-              <button class="btn btn-white btn-xs modalCall" name="inputStar">별점주기</button>
-            </div>
-          </div>
-        </li>
-        <li>
-          <span class="number">38</span>
-          <div class="thumbnail"><i class="fa fa-file-image"></i></div>
-          <ul class="titleWrap">
-            <li><strong>갈마볼링센터</strong></li>
-            <li><label class="control-label">전화번호</label><span>042-000-000</span></li>
-            <li>
-              <label class="control-label">주소</label>
-              <span>대전시 서구 갈마로00 00번길
-                                <button class="btn btn-default btn-xs">
-                                    <i class="fa fa-map-marked"></i>
-                                </button>
-                            </span>
-            </li>
-            <li><label class="control-label">레일 수</label><span>20</span></li>
-          </ul>
-          <div class="state star">
-            <div class="starWrap">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-            <div class="starButton">
-              <button class="btn btn-white btn-xs modalCall" name="inputStar">별점주기</button>
+              <button class="btn btn-white btn-xs modalCall"
+                      name="inputStar"
+                      @click="modalOpen(item)">
+                별점주기
+              </button>
             </div>
           </div>
         </li>
       </ul>
       <paginate></paginate>
-      <button-wrap btn-name="영상등록"></button-wrap>
+      <button-wrap>
+        <button class="btn btn-primary"
+                @click="goPage()">
+          <i class="fa fa-check"></i> 등록
+        </button>
+      </button-wrap>
     </section>
+    <modal title="별점주기"
+           id="inputStar"
+           class="modal-small"
+           :is-open.sync="modalIsOpen">
+      <div slot="modal-contents">
+        <h4>{{ modalAlleyName }}</h4>
+        <div class="inputStar">
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+      </div>
+    </modal>
   </div>
 </template>
 
@@ -161,6 +79,7 @@ import SubTitle from '@/components/SubTitle.vue';
 import TableSearch from '@/components/TableSearch.vue';
 import Paginate from '@/components/Paginate.vue';
 import ButtonWrap from '@/components/ButtonWrap.vue';
+import Modal from '@/components/ModalStar.vue';
 
 export default {
   name: 'AlleyList',
@@ -169,6 +88,56 @@ export default {
     SubTitle,
     TableSearch,
     ButtonWrap,
+    Modal,
+  },
+  data() {
+    return {
+      modalIsOpen: false,
+      modalAlleyName: '',
+      items: [
+        {
+          id: 4,
+          number: 4,
+          alleyName: '스타락볼링',
+          phoneNumber: '042-000-000',
+          alleyAddress: '대전시 서구 갈마로00 00번길',
+          railCnt: 10,
+        },
+        {
+          id: 3,
+          number: 3,
+          alleyName: '퍼펙트 볼링센타',
+          phoneNumber: '042-000-000',
+          alleyAddress: '대전시 서구 갈마로00 00번길',
+          railCnt: 10,
+        },
+        {
+          id: 2,
+          number: 2,
+          alleyName: '둔산볼링센터',
+          phoneNumber: '042-000-000',
+          alleyAddress: '대전시 서구 갈마로00 00번길',
+          railCnt: 10,
+        },
+        {
+          id: 1,
+          number: 1,
+          alleyName: '에스케이월드볼링',
+          phoneNumber: '042-000-000',
+          alleyAddress: '대전시 서구 갈마로00 00번길',
+          railCnt: 10,
+        },
+      ],
+    };
+  },
+  methods: {
+    modalOpen(item) {
+      this.modalIsOpen = !this.modalIsOpen;
+      this.modalAlleyName = item.alleyName;
+    },
+    goPage() {
+      this.$router.push('/bowling/alley/form');
+    },
   },
 };
 </script>
@@ -244,4 +213,12 @@ ol, ul {
 .container .thumb>li>.state {flex-basis:200px;text-align:right;}
 .container .thumb>li>.state.star .starWrap {color:#F2B441;}
 .container .thumb>li>.state .starButton {margin-top:5px;}
+
+.modal .inputStar {text-align:center;font-size:40px;padding:50px 0;}
+
+.btn-white {
+  background: #fff;
+  color: #555;
+  border: 1px solid #ccc;
+}
 </style>

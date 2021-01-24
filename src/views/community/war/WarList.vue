@@ -21,85 +21,26 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-          <td>45</td>
+        <tr v-for="item in items" :key="item.id">
+          <td>{{ item.number }}</td>
           <td class="text-left">
-            <router-link to="/community/war/detail">갈마볼링장 2021 신년맞이 팀전</router-link>
-          <td>2020-11-25</td>
-          <td>관리자</td>
-          <td>15</td>
-        </tr>
-        <tr>
-          <td>44</td>
-          <td class="text-left"><a href="war-detail.html">12월 프리덤 전 상품 안내</a></td>
-          <td>2020-11-25</td>
-          <td>1팀장</td>
-          <td>24</td>
-        </tr>
-        <tr>
-          <td>43</td>
-          <td class="text-left"><a href="war-detail.html">12월 프리덤 전 일정 안내</a></td>
-          <td>2020-11-25</td>
-          <td>관리자</td>
-          <td>66</td>
-        </tr>
-        <tr>
-          <td>42</td>
-          <td class="text-left">
-            <a href="war-detail.html">“락볼링장서 영감” 에피치오, UX디자인 IoT 포켓볼 기기 개발 - 매일경제</a>
+            <router-link :to="`/community/war/detail/${item.id}`">
+              {{ item.title }}
+            </router-link>
           </td>
-          <td>2020-11-25</td>
-          <td>55팀장</td>
-          <td>22</td>
-        </tr>
-        <tr>
-          <td>41</td>
-          <td class="text-left"><a href="war-detail.html">실업 볼링팀, 대통령기 전국볼링대회 개인전 金</a></td>
-          <td>2020-11-25</td>
-          <td>관리자</td>
-          <td>17</td>
-        </tr>
-        <tr>
-          <td>40</td>
-          <td class="text-left"><a href="war-detail.html">야간 이벤트 안내</a></td>
-          <td>2020-11-25</td>
-          <td>++팀장</td>
-          <td>15</td>
-        </tr>
-        <tr>
-          <td>39</td>
-          <td class="text-left"><a href="war-detail.html">11월 프리덤 전 상품 안내</a></td>
-          <td>2020-11-25</td>
-          <td>관리자</td>
-          <td>33</td>
-        </tr>
-        <tr>
-          <td>38</td>
-          <td class="text-left"><a href="war-detail.html">11월 프리덤 전 일정 안내</a></td>
-          <td>2020-11-25</td>
-          <td>관리자</td>
-          <td>48</td>
-        </tr>
-        <tr>
-          <td>37</td>
-          <td class="text-left">
-            <a href="war-detail.html">“락볼링장서 영감” 에피치오, UX디자인 IoT 포켓볼 기기 개발 - 매일경제</a>
-          </td>
-          <td>2020-11-25</td>
-          <td>관리자</td>
-          <td>34</td>
-        </tr>
-        <tr>
-          <td>36</td>
-          <td class="text-left"><a href="war-detail.html">실업 볼링팀, 대통령기 전국볼링대회 개인전 金</a></td>
-          <td>2020-11-25</td>
-          <td>**팀장</td>
-          <td>26</td>
+          <td>{{ item.date }}</td>
+          <td>{{ item.author }}</td>
+          <td>{{ item.views }}</td>
         </tr>
         </tbody>
       </table>
       <paginate></paginate>
-      <button-wrap btn-name="글등록"></button-wrap>
+      <button-wrap>
+        <button class="btn btn-primary"
+                @click="goPage()">
+          <i class="fa fa-check"></i> 등록
+        </button>
+      </button-wrap>
     </section>
   </div>
 </template>
@@ -117,6 +58,49 @@ export default {
     SubTitle,
     TableSearch,
     ButtonWrap,
+  },
+  data() {
+    return {
+      items: [
+        {
+          id: 4,
+          number: 4,
+          author: '관리자',
+          date: '2021-01-24',
+          title: '대전신청',
+          views: 400,
+        },
+        {
+          id: 3,
+          number: 3,
+          author: '관리자',
+          date: '2021-01-24',
+          title: '대전신청',
+          views: 300,
+        },
+        {
+          id: 2,
+          number: 2,
+          author: '관리자',
+          date: '2021-01-24',
+          title: '대전신청',
+          views: 200,
+        },
+        {
+          id: 1,
+          number: 1,
+          author: '관리자',
+          date: '2021-01-24',
+          title: '대전신청',
+          views: 100,
+        },
+      ],
+    };
+  },
+  methods: {
+    goPage() {
+      this.$router.push('/community/war/form');
+    },
   },
 };
 </script>

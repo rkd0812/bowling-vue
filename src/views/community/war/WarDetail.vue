@@ -36,9 +36,11 @@
           </div>
         </div>
       </div>
-      <div class="btnWrap">
-        <button class="btn btn-primary" onclick="location.href='war-list.html'">목록</button>
-      </div>
+      <button-wrap>
+        <button class="btn btn-primary" @click="goPage()">
+          <i class="fa fa-list"></i> 목록
+        </button>
+      </button-wrap>
     </section>
   </div>
 </template>
@@ -49,8 +51,15 @@ import ButtonWrap from '@/components/ButtonWrap.vue';
 
 export default {
   name: 'WarDetail',
-  ButtonWrap,
-  SubTitle,
+  components: {
+    ButtonWrap,
+    SubTitle,
+  },
+  methods: {
+    goPage() {
+      this.$router.push('/community/war/list');
+    },
+  },
 };
 </script>
 

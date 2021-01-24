@@ -19,7 +19,11 @@
           양측 회원들의 열띤 응원속에서 오늘의 우승자가 극적으로 탄생했다.
         </div>
       </div>
-      <button-wrap btn-name="목록"></button-wrap>
+      <button-wrap>
+        <button class="btn btn-primary" @click="goPage()">
+          <i class="fa fa-list"></i> 목록
+        </button>
+      </button-wrap>
     </section>
   </div>
 </template>
@@ -30,8 +34,15 @@ import ButtonWrap from '@/components/ButtonWrap.vue';
 
 export default {
   name: 'GalleryDetail',
-  ButtonWrap,
-  SubTitle,
+  components: {
+    ButtonWrap,
+    SubTitle,
+  },
+  methods: {
+    goPage() {
+      this.$router.push('/bowling/gallery/list');
+    },
+  },
 };
 </script>
 

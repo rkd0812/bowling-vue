@@ -56,7 +56,7 @@ const routes = [
     component: NoticeList,
   },
   {
-    path: '/community/notice/detail',
+    path: '/community/notice/detail/:id',
     name: 'NoticeDetail',
     component: NoticeDetail,
   },
@@ -71,7 +71,7 @@ const routes = [
     component: FreeList,
   },
   {
-    path: '/community/freeboard/detail',
+    path: '/community/freeboard/detail/:id',
     name: 'FreeDetail',
     component: FreeDetail,
   },
@@ -82,32 +82,32 @@ const routes = [
   },
   {
     path: '/community/used/list',
-    name: 'Used',
+    name: 'UsedList',
     component: UsedList,
   },
   {
-    path: '/community/used/detail',
-    name: 'Used',
+    path: '/community/used/detail/:id',
+    name: 'UsedDetail',
     component: UsedDetail,
   },
   {
     path: '/community/used/form',
-    name: 'War',
+    name: 'UsedForm',
     component: UsedForm,
   },
   {
     path: '/community/war/list',
-    name: 'War',
+    name: 'WarList',
     component: WarList,
   },
   {
-    path: '/community/war/detail',
-    name: 'War',
+    path: '/community/war/detail/:id',
+    name: 'WarDetail',
     component: WarDetail,
   },
   {
     path: '/community/war/form',
-    name: 'War',
+    name: 'WarForm',
     component: WarForm,
   },
   {
@@ -131,18 +131,18 @@ const routes = [
     component: GalleryList,
   },
   {
-    path: '/bowling/gallery/detail',
-    name: 'Gallery',
+    path: '/bowling/gallery/detail/:id',
+    name: 'GalleryDetail',
     component: GalleryDetail,
   },
   {
     path: '/bowling/gallery/form',
-    name: 'Gallery',
+    name: 'GalleryForm',
     component: GalleryForm,
   },
   {
     path: '/bowling/alley/list',
-    name: 'Alley',
+    name: 'AlleyList',
     component: AlleyList,
   },
   {

@@ -38,10 +38,12 @@
         </table>
       </div>
       <button-wrap>
-        <button class="btn btn-default" onclick="location.href=''">
+        <button class="btn btn-default"
+                @click="goPage()">
           <i class="fa fa-times"></i>  취소
         </button>
-        <button class="btn btn-primary" onclick="location.href=''">
+        <button class="btn btn-primary"
+                @click="goPage()">
           <i class="fa fa-check"></i>  등록
         </button>
       </button-wrap>
@@ -58,6 +60,11 @@ export default {
   components: {
     SubTitle,
     ButtonWrap,
+  },
+  methods: {
+    goPage() {
+      this.$router.push('/community/notice/list');
+    },
   },
 };
 </script>

@@ -28,7 +28,7 @@
       </div>
       <button-wrap>
         <button class="btn btn-primary" @click="goPage()">
-          <i class="fa fa-list"> 목록</i>
+          <i class="fa fa-list"></i> 목록
         </button>
       </button-wrap>
     </section>

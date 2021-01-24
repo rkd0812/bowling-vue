@@ -1,6 +1,7 @@
 <template>
  <div>
-  <section>
+   <sub-title title="자유게시판"></sub-title>
+   <section>
     <div class="inputWrap">
       <table class="table-horizontal">
         <colgroup>
@@ -36,17 +37,35 @@
         </tbody>
       </table>
     </div>
-    <div class="btnWrap">
-      <button class="btn btn-default" onclick="location.href='board-list.html'">취소</button>
-      <button class="btn btn-primary" onclick="location.href='board-list.html'">등록</button>
-    </div>
+     <button-wrap>
+       <button class="btn btn-default"
+               @click="goPage()">
+         <i class="fa fa-times"></i>  취소
+       </button>
+       <button class="btn btn-primary"
+               @click="goPage()">
+         <i class="fa fa-check"></i>  등록
+       </button>
+     </button-wrap>
   </section>
  </div>
 </template>
 
 <script>
+import SubTitle from '@/components/SubTitle.vue';
+import ButtonWrap from '@/components/ButtonWrap.vue';
+
 export default {
   name: 'FreeForm',
+  components: {
+    SubTitle,
+    ButtonWrap,
+  },
+  methods: {
+    goPage() {
+      this.$router.push('/community/freeboard/list');
+    },
+  },
 };
 </script>
 
