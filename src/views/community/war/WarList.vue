@@ -1,6 +1,6 @@
 <template>
   <div>
-    <sub-title title="자유게시판"></sub-title>
+    <sub-title title="대전신청"></sub-title>
     <section>
       <table-search></table-search>
       <table class="table-vertical">
@@ -24,7 +24,7 @@
         <tr v-for="item in items" :key="item.id">
           <td>{{ item.number }}</td>
           <td class="text-left">
-            <router-link :to="`/community/freeboard/detail/${item.id}`">
+            <router-link :to="`/community/war/detail/${item.id}`">
               {{ item.title }}
             </router-link>
           </td>
@@ -52,7 +52,7 @@ import Paginate from '@/components/Paginate.vue';
 import ButtonWrap from '@/components/ButtonWrap.vue';
 
 export default {
-  name: 'FreeList',
+  name: 'WarList',
   components: {
     Paginate,
     SubTitle,
@@ -61,23 +61,21 @@ export default {
   },
   data() {
     return {
-      modalIsOpen: false,
-      title: '자유게시판',
       items: [
         {
           id: 4,
           number: 4,
-          author: '볼링의신',
+          author: '관리자',
           date: '2021-01-24',
-          title: '볼링의신 일일강좌 모집',
+          title: '대전신청',
           views: 400,
         },
         {
           id: 3,
           number: 3,
-          author: '볼링초보',
+          author: '관리자',
           date: '2021-01-24',
-          title: '볼링초보입니다. 가입인사드려요~~',
+          title: '대전신청',
           views: 300,
         },
         {
@@ -85,7 +83,7 @@ export default {
           number: 2,
           author: '관리자',
           date: '2021-01-24',
-          title: '자유게시판입니다. 욕설금지',
+          title: '대전신청',
           views: 200,
         },
         {
@@ -93,7 +91,7 @@ export default {
           number: 1,
           author: '관리자',
           date: '2021-01-24',
-          title: '자유게시판입니다. 테스트중입니다.',
+          title: '대전신청',
           views: 100,
         },
       ],
@@ -101,7 +99,7 @@ export default {
   },
   methods: {
     goPage() {
-      this.$router.push('/community/freeboard/form');
+      this.$router.push('/community/war/form');
     },
   },
 };

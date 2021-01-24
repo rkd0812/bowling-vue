@@ -40,14 +40,14 @@ import SubTitle from '@/components/SubTitle.vue';
 import ButtonWrap from '@/components/ButtonWrap.vue';
 
 export default {
-  name: 'NoticeDetail',
+  name: 'UsedDetail',
   components: {
     ButtonWrap,
     SubTitle,
   },
   methods: {
     goPage() {
-      this.$router.push('/community/notice/list');
+      this.$router.push('/community/used/list');
     },
   },
 };

@@ -16,6 +16,16 @@ import HallOfFame from '../views/halloffame/fame/HallOfFame.vue';
 import TeamFee from '../views/myteam/team/TeamFee.vue';
 import PollList from '../views/myteam/poll/PollList.vue';
 import PollDetail from '../views/myteam/poll/PollDetail.vue';
+import WarDetail from '../views/community/war/WarDetail.vue';
+import WarForm from '../views/community/war/WarForm.vue';
+import WarList from '../views/community/war/WarList.vue';
+import UsedDetail from '../views/community/used/UsedDetail.vue';
+import UsedForm from '../views/community/used/UsedForm.vue';
+import UsedList from '../views/community/used/UsedList.vue';
+import GalleryDetail from '../views/bowling/gallery/GalleryDetail.vue';
+import GalleryForm from '../views/bowling/gallery/GalleryForm.vue';
+import GalleryList from '../views/bowling/gallery/GalleryList.vue';
+import AlleyList from '../views/bowling/alley/AlleyList.vue';
 
 Vue.use(VueRouter);
 
@@ -46,7 +56,7 @@ const routes = [
     component: NoticeList,
   },
   {
-    path: '/community/notice/detail',
+    path: '/community/notice/detail/:id',
     name: 'NoticeDetail',
     component: NoticeDetail,
   },
@@ -61,7 +71,7 @@ const routes = [
     component: FreeList,
   },
   {
-    path: '/community/freeboard/detail',
+    path: '/community/freeboard/detail/:id',
     name: 'FreeDetail',
     component: FreeDetail,
   },
@@ -69,6 +79,36 @@ const routes = [
     path: '/community/freeboard/form',
     name: 'FreeForm',
     component: FreeForm,
+  },
+  {
+    path: '/community/used/list',
+    name: 'UsedList',
+    component: UsedList,
+  },
+  {
+    path: '/community/used/detail/:id',
+    name: 'UsedDetail',
+    component: UsedDetail,
+  },
+  {
+    path: '/community/used/form',
+    name: 'UsedForm',
+    component: UsedForm,
+  },
+  {
+    path: '/community/war/list',
+    name: 'WarList',
+    component: WarList,
+  },
+  {
+    path: '/community/war/detail/:id',
+    name: 'WarDetail',
+    component: WarDetail,
+  },
+  {
+    path: '/community/war/form',
+    name: 'WarForm',
+    component: WarForm,
   },
   {
     path: '/mypage/account/myaccount',
@@ -84,6 +124,26 @@ const routes = [
     path: '/halloffame/fame/halloffame',
     name: 'HallOfFame',
     component: HallOfFame,
+  },
+  {
+    path: '/bowling/gallery/list',
+    name: 'Gallery',
+    component: GalleryList,
+  },
+  {
+    path: '/bowling/gallery/detail/:id',
+    name: 'GalleryDetail',
+    component: GalleryDetail,
+  },
+  {
+    path: '/bowling/gallery/form',
+    name: 'GalleryForm',
+    component: GalleryForm,
+  },
+  {
+    path: '/bowling/alley/list',
+    name: 'AlleyList',
+    component: AlleyList,
   },
   {
     path: '/myteam/team/teamfee',

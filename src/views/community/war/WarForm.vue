@@ -1,6 +1,6 @@
 <template>
   <div>
-    <sub-title title="공지사항"></sub-title>
+    <sub-title title="대전신청"></sub-title>
     <section>
       <div class="inputWrap">
         <table class="table-horizontal">
@@ -16,22 +16,24 @@
           <tr>
             <th>내용</th>
             <td>
-              <textarea rows="10" class="form-control"></textarea>
+              <textarea rows="10" class="form-control">
+              </textarea>
             </td>
           </tr>
           <tr>
-            <th>첨부파일</th>
-            <td>
-              <ul class="fileFUpload">
-                <li>
-                  <strong>파일 찾기</strong>
-                  <input type="file" class="form-control">
-                  <div class="tableBtnWrap">
-                    <a href="#"><i class="fa fa-plus-circle"></i></a>
-                    <a href="#"><i class="fa fa-minus-circle"></i></a>
-                  </div>
-                </li>
-              </ul>
+            <th>대전상대 지정</th>
+            <td class="radioWrap">
+              <label><input type="radio" name="group1" checked> 지정</label>
+              <label><input type="radio" name="group1"> 지정하지 않음</label>
+            </td>
+          </tr>
+          <tr>
+            <th>대전상대</th>
+            <td class="player">
+              <span>홍길동</span><span>장발장</span><span>소문</span>
+              <button class="btn btn-default btn-small modalCall"
+                      name="searchPlayer">대전상대 찾기
+              </button>
             </td>
           </tr>
           </tbody>
@@ -56,14 +58,14 @@ import SubTitle from '@/components/SubTitle.vue';
 import ButtonWrap from '@/components/ButtonWrap.vue';
 
 export default {
-  name: 'NoticeForm',
+  name: 'WarForm',
   components: {
     SubTitle,
     ButtonWrap,
   },
   methods: {
     goPage() {
-      this.$router.push('/community/notice/list');
+      this.$router.push('/community/war/list');
     },
   },
 };

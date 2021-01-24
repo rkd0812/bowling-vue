@@ -56,14 +56,14 @@ import SubTitle from '@/components/SubTitle.vue';
 import ButtonWrap from '@/components/ButtonWrap.vue';
 
 export default {
-  name: 'NoticeForm',
+  name: 'UsedForm',
   components: {
     SubTitle,
     ButtonWrap,
   },
   methods: {
     goPage() {
-      this.$router.push('/community/notice/list');
+      this.$router.push('/community/used/list');
     },
   },
 };
