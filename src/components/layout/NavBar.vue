@@ -4,7 +4,7 @@
       <i class="fa fa-bowling-ball"></i> <router-link to="/">BOWLING CLUB</router-link>
     </h1>
     <div class="global">
-      <router-link to="/members/Login"><i class="fa fa-sign-in"></i> 로그인</router-link>
+      <router-link to="/members/Login"><i class="fa fa-sign-in-alt"></i> 로그인</router-link>
       <router-link to="/members/Join"><i class="fa fa-user-plus"></i> 회원가입</router-link>
     </div>
     <div class="gnb">
@@ -23,7 +23,7 @@
           </ul>
         </li>
         <li>
-          <router-link to="/halloffame/fame/HallOfFame">명예의전당</router-link>
+          <router-link to="/halloffame/fame/halloffame">명예의전당</router-link>
         </li>
         <li><a href="#">커뮤니티</a>
           <ul class="depth_second">
@@ -56,8 +56,10 @@
         <li><a href="#">팀관리</a>
           <ul class="depth_second">
             <li><a href="#">팀관리</a></li>
-            <li><a href="#">투표</a></li>
-            <li><a href="#">회비관리</a></li>
+            <li><router-link to="/myteam/poll/PollList">투표</router-link></li>
+            <li>
+              <router-link to="/myteam/team/TeamFee">회비관리</router-link>
+            </li>
           </ul>
         </li>
       </ul>
