@@ -61,7 +61,6 @@ export default {
   },
   data() {
     return {
-      modalIsOpen: false,
       title: '자유게시판',
       items: [
         {

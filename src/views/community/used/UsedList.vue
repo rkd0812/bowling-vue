@@ -51,7 +51,6 @@ export default {
   },
   data() {
     return {
-      modalIsOpen: false,
       items: [
         {
           id: 4,
@@ -106,44 +105,58 @@ export default {
 
 <style scoped>
 /* thumbnail list */
-.container .thumb {
+.thumb {
   border-top:2px solid #ccc;
 }
-.container .thumb>li {
+.thumb>li {
   display:flex;
   flex-wrap:wrap;
-  justify-content:space-between;
+  justify-content:flex-start;
   align-items:center;
   border-bottom:1px dashed #ccc;
-  padding: 5px 0;
+  padding:10px 0;
+  list-style: circle;
 }
-.thumbnail {
+.thumb>li:last-child {
+  border-bottom-style:solid;
+}
+.thumb li .number {
+  flex-basis:60px;
+}
+.thumb li .thumbnail {
   flex-basis:100px;
   background:#f9f9f9;
   border:1px solid #ddd;
   height:100px;
   text-align:center;
-  line-height:100px;
+  ine-height:100px;
   margin-right:10px;
   color:#ccc;
 }
-.thumb>li .number {flex-basis:60px;}
+.titleWrap {
+  flex:1;
+  margin-left:20px;
+}
+.titleWrap ul {
+  list-style:circle;
+}
+.titleWrap li {
+  margin-left:20px;
+  margin-bottom:5px;
+}
 
-.container .thumb>li .titleWrap {
-  flex: 1;
-  margin-left: 20px;
-  list-style: none;
-}
-.container .thumb>li>.titleWrap li {
-  margin-left: 20px;
-  margin-bottom: 5px;
-  list-style: circle;
-  border-bottom : none;
-}
 .container .thumb>li>.titleWrap li:first-child {
-  list-style: none;
-  margin-left: 0;
-  margin-bottom: 10px;
+  list-style:none;
+  margin-left:0;
+  margin-bottom:10px;
+}
+
+.container .thumb>li>.titleWrap li {
+  border-bottom:none;
+  list-style:circle;
+  display: list-item;
+  padding: 0;
+  justify-content:flex-start;
 }
 .container .thumb>li>.titleWrap li strong {
   font-size: 1.2em;

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <sub-title title="볼링 영상"></sub-title>
+    <sub-title title="볼링영상"></sub-title>
     <section>
       <table-search></table-search>
       <ul class="gallery">

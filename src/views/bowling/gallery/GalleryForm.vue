@@ -20,19 +20,20 @@
             <td><input id="title"
                        v-model="title"
                        type="text"
-                       class="form-control"></td>
+                       class="form-control">
+            </td>
           </tr>
           <tr>
             <th>표시여부</th>
-            <td class="checkboxWrap">
+            <td class="radioWrap">
               <label><input id="visibleGallery"
                             value="Y"
                             type="radio"
-                            v-model="isShowGallery"> 표시</label>
+                            v-model="showGalleryYn"> 표시</label>
               <label><input id="hiddenGallery"
                             value="N"
                             type="radio"
-                            v-model="isShowGallery"> 표시안함</label>
+                            v-model="showGalleryYn"> 표시안함</label>
             </td>
           </tr>
           <tr>
@@ -116,7 +117,7 @@ export default {
   data() {
     return {
       title: '',
-      isShowGallery: true,
+      showGalleryYn: 'Y',
     };
   },
 };
