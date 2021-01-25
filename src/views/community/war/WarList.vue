@@ -38,7 +38,7 @@
       <button-wrap>
         <button class="btn btn-primary"
                 @click="goPage()">
-          <i class="fa fa-check"></i> 등록
+          <i class="fa fa-check"></i> 신청
         </button>
       </button-wrap>
     </section>

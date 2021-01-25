@@ -1,6 +1,6 @@
 <template>
   <div>
-    <sub-title title="공지사항"></sub-title>
+    <sub-title title="중고장터"></sub-title>
     <section>
       <div class="inputWrap">
         <table class="table-horizontal">
