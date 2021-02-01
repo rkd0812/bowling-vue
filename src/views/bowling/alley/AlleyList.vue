@@ -20,9 +20,9 @@
             <li>
               <label class="control-label">주소</label>
               <span>{{ item.alleyAddress }}
-                                <button class="btn btn-default btn-xs">
-                                    <i class="fa fa-map-marked"></i>
-                                </button>
+                <button class="btn btn-default btn-xs">
+                    <i class="fa fa-map-marked"></i>
+                </button>
               </span>
             </li>
             <li>
@@ -92,6 +92,7 @@ export default {
   },
   data() {
     return {
+      thumb: 'thumb',
       modalIsOpen: false,
       modalAlleyName: '',
       items: [
