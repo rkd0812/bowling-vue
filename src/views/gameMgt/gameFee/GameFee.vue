@@ -1,6 +1,6 @@
 <template>
   <div>
-    <sub-title title="팀회비"></sub-title>
+    <sub-title title="게임회비"></sub-title>
     <section>
       <ul class="feeList">
         <li v-for="(fee, idx) in feeList" :key="idx">
@@ -39,7 +39,7 @@ import SubTitle from '@/components/SubTitle.vue';
 import Paginate from '@/components/Paginate.vue';
 
 export default {
-  name: 'TeamFee',
+  name: 'GameFee',
   components: {
     Paginate,
     SubTitle,

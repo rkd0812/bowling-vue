@@ -168,7 +168,7 @@ export default {
   border:1px solid #ddd;
   height:100px;
   text-align:center;
-  ine-height:100px;
+  line-height:100px;
   margin-right:10px;
   color:#ccc;
 }
@@ -182,6 +182,7 @@ export default {
 .titleWrap li {
   margin-left:20px;
   margin-bottom:5px;
+  height:20px;
 }
 
 .container .thumb>li>.titleWrap li:first-child {

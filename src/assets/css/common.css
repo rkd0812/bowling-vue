@@ -29,7 +29,8 @@ h4 {font-size:16px;font-weight:700;margin-bottom:20px;}
 
 .btn {display:inline-block;padding:10px 20px;color:#fff;border:none;cursor:pointer;font-size:16px;border-radius:2px;
     margin-left:3px;}
-.btn-small {font-size:.85em;padding:7px 12px;height:40px;}
+.btn-small {font-size:.85em;padding:4px 12px;}
+.btn-xs {font-size:.85em;padding:5px 7px;height:auto;}
 .btnWrap.center {text-align:center;}
 
 .btn-primary        {background: #F18229;}

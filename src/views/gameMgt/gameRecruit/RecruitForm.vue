@@ -1,6 +1,6 @@
 <template>
   <div>
-    <sub-title title="대전신청"></sub-title>
+    <sub-title title="게임모집"></sub-title>
     <section>
       <div class="inputWrap">
         <table class="table-horizontal">
@@ -12,9 +12,9 @@
           <tr>
             <th>제목</th>
             <td><input id="title"
-                           v-model="title"
-                           type="text"
-                           class="form-control">
+                       v-model="title"
+                       type="text"
+                       class="form-control">
             </td>
           </tr>
           <tr>
@@ -82,7 +82,7 @@ import TableVertical from '@/components/TableVertical.vue';
 import Modal from '@/components/ModalStar.vue';
 
 export default {
-  name: 'WarForm',
+  name: 'RecruitForm',
   components: {
     SubTitle,
     ButtonWrap,
@@ -99,7 +99,7 @@ export default {
   },
   methods: {
     goPage() {
-      this.$router.push('/community/war/list');
+      this.$router.push('/gameMgt/recruit/list');
     },
     modalOpen() {
       this.modalIsOpen = !this.modalIsOpen;

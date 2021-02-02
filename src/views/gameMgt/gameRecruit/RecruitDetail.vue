@@ -1,6 +1,6 @@
 <template>
   <div>
-    <sub-title title="대전신청"></sub-title>
+    <sub-title title="게임모집"></sub-title>
     <section>
       <div class="contents_header">
         <div class="titleWrap">
@@ -50,14 +50,14 @@ import SubTitle from '@/components/SubTitle.vue';
 import ButtonWrap from '@/components/ButtonWrap.vue';
 
 export default {
-  name: 'WarDetail',
+  name: 'RecruitDetail',
   components: {
     ButtonWrap,
     SubTitle,
   },
   methods: {
     goPage() {
-      this.$router.push('/community/war/list');
+      this.$router.push('/gameMgt/recruit/list');
     },
   },
 };

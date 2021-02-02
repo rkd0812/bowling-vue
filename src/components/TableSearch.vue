@@ -39,6 +39,7 @@ export default {
   font-size: .85em;
   width: 40px;
   padding: 0;
+  vertical-align:top;
 }
 
 </style>
