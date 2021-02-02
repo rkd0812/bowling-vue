@@ -36,9 +36,6 @@
             <li>
               <router-link to="/community/used/list">중고장터</router-link>
             </li>
-            <li>
-              <router-link to="/community/war/list">대전신청</router-link>
-            </li>
           </ul>
         </li>
         <li><a href="#">마이페이지</a>
@@ -47,18 +44,18 @@
               <router-link to="/mypage/account/myaccount">나의 계정</router-link>
             </li>
             <li><a href="#">나의 스코어</a></li>
-            <li><a href="#">게임관리</a></li>
             <li>
               <router-link to="/mypage/schedule/mycalendar">나의 일정</router-link>
             </li>
           </ul>
         </li>
-        <li><a href="#">팀관리</a>
+        <li><a href="#">게임관리</a>
           <ul class="depth_second">
-            <li><a href="#">팀관리</a></li>
-            <li><router-link to="/myteam/poll/PollList">투표</router-link></li>
             <li>
-              <router-link to="/myteam/team/TeamFee">회비관리</router-link>
+              <router-link to="/gameMgt/recruit/list">게임모집</router-link>
+            </li>
+            <li>
+              <router-link to="/gameMgt/gameFee/fee">회비관리</router-link>
             </li>
           </ul>
         </li>
