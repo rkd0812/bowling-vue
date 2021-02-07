@@ -146,5 +146,4 @@ export default {
   border-top: 1px solid #ccc;
   text-align: right;
 }
-
 </style>

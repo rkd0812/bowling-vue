@@ -29,7 +29,7 @@
             </router-link>
             <div class="coords">
               <span><i class="fa fa-calendar-alt"></i></span>
-              <span>2021. 02. 15(월) 18:30</span>
+              <span>{{ item.dateTime }}</span>
             </div>
             <div class="coords">
               <span><i class="fa fa-map-marker-alt"></i></span>
@@ -40,7 +40,9 @@
             <div class="stats">
               <div>
                 <div class="title">모집종료일</div>
-                <i class="fa fa-hourglass-end"></i>
+                <i class="fa"
+                   :class="item.recruiting ?
+                          'fa-hourglass-half' : 'fa-hourglass-end'"></i>
                 <div class="value">{{ item.endDate }}</div>
               </div>
               <div>
@@ -95,6 +97,7 @@ export default {
           endDate: '02.14',
           title: '1월 게임모집합니다.',
           alleyName: '현대볼링장',
+          dateTime: '2021. 02. 15(월) 18:30',
           views: 400,
           recruiting: true,
           applicationNumber: 3,
@@ -109,6 +112,7 @@ export default {
           endDate: '02.23',
           title: '2:2 게임인원 모집합니다.',
           alleyName: '만년볼링장',
+          dateTime: '2021. 02. 24(수) 18:30',
           views: 300,
           recruiting: true,
           applicationNumber: 10,
@@ -123,6 +127,7 @@ export default {
           endDate: '01.24',
           title: '외부 클럽 대항전 게임 인원 모집',
           alleyName: '현대볼링장',
+          dateTime: '2021. 01. 24(일) 13:00',
           views: 200,
           recruiting: false,
           applicationNumber: 3,
@@ -137,6 +142,7 @@ export default {
           endDate: '01.01',
           title: '1:1 대전신청',
           alleyName: '현대볼링장',
+          dateTime: '2021. 01. 01(금) 18:00',
           views: 100,
           recruiting: false,
           applicationNumber: 6,
