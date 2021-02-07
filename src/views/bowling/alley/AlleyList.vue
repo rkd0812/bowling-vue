@@ -62,13 +62,7 @@
            :is-open.sync="modalIsOpen">
       <div slot="modal-contents">
         <h4>{{ modalAlleyName }}</h4>
-        <div class="inputStar">
-          <i class="far fa-star"></i>
-          <i class="far fa-star"></i>
-          <i class="far fa-star"></i>
-          <i class="far fa-star"></i>
-          <i class="far fa-star"></i>
-        </div>
+        <Rating :grade="3" :maxStars="5" :hasCounter="true" />
       </div>
     </modal>
   </div>
@@ -80,6 +74,7 @@ import TableSearch from '@/components/TableSearch.vue';
 import Paginate from '@/components/Paginate.vue';
 import ButtonWrap from '@/components/ButtonWrap.vue';
 import Modal from '@/components/ModalStar.vue';
+import Rating from '@/components/Rating.vue';
 
 export default {
   name: 'AlleyList',
@@ -89,11 +84,13 @@ export default {
     TableSearch,
     ButtonWrap,
     Modal,
+    Rating,
   },
   data() {
     return {
       modalIsOpen: false,
       modalAlleyName: '',
+      starts: this.grade,
       items: [
         {
           id: 4,
@@ -137,6 +134,11 @@ export default {
     },
     goPage() {
       this.$router.push('/bowling/alley/form');
+    },
+    rate(star) {
+      if (typeof star === 'number' && star <= this.maxStars && star >= 0) {
+        this.stars = this.stars === star ? star - 1 : star;
+      }
     },
   },
 };
