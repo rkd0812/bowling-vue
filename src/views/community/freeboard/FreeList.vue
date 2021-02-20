@@ -21,7 +21,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr v-for="item in items" :key="item.id">
+        <tr v-for="item in freeBoardList" :key="item.id">
           <td>{{ item.number }}</td>
           <td class="text-left">
             <router-link :to="`/community/freeboard/detail/${item.id}`">
@@ -29,7 +29,7 @@
             </router-link>
           </td>
           <td>{{ item.date }}</td>
-          <td>{{ item.author }}</td>
+          <td>{{ item.authorName }}</td>
           <td>{{ item.views }}</td>
         </tr>
         </tbody>
@@ -50,6 +50,8 @@ import SubTitle from '@/components/SubTitle.vue';
 import TableSearch from '@/components/TableSearch.vue';
 import Paginate from '@/components/Paginate.vue';
 import ButtonWrap from '@/components/ButtonWrap.vue';
+import { mapState, mapActions } from 'vuex';
+/* import axios from 'axios'; */
 
 export default {
   name: 'FreeList',
@@ -59,49 +61,34 @@ export default {
     TableSearch,
     ButtonWrap,
   },
+  computed: {
+    ...mapState({
+      freeBoardList: 'freeBoardList',
+    }),
+  },
   data() {
     return {
       title: '자유게시판',
-      items: [
-        {
-          id: 4,
-          number: 4,
-          author: '볼링의신',
-          date: '2021-01-24',
-          title: '볼링의신 일일강좌 모집',
-          views: 400,
-        },
-        {
-          id: 3,
-          number: 3,
-          author: '볼링초보',
-          date: '2021-01-24',
-          title: '볼링초보입니다. 가입인사드려요~~',
-          views: 300,
-        },
-        {
-          id: 2,
-          number: 2,
-          author: '관리자',
-          date: '2021-01-24',
-          title: '자유게시판입니다. 욕설금지',
-          views: 200,
-        },
-        {
-          id: 1,
-          number: 1,
-          author: '관리자',
-          date: '2021-01-24',
-          title: '자유게시판입니다. 테스트중입니다.',
-          views: 100,
-        },
-      ],
     };
   },
   methods: {
     goPage() {
       this.$router.push('/community/freeboard/form');
     },
+    ...mapActions([
+      'FETCH_FREE_BOARD_LIST',
+    ]),
+  },
+  created() {
+    this.FETCH_FREE_BOARD_LIST();
+    /* axios
+      .get('http://localhost:3000/api/freeboards')
+      .then((response) => {
+        this.freeBoardList = response.data;
+      })
+      .catch((error) => {
+        console.log('Error Message :', error.response);
+      }); */
   },
 };
 </script>
