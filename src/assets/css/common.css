@@ -61,6 +61,7 @@ textarea.form-control {height:auto;}
 .text-warning   {color:#d2972a;}
 .text-info      {color:#027abc;}
 .text-success   {color:#458955;}
+.text-small     {font-size:.8em;}
 
 /* table */
 table {width:100%;border-collapse:collapse;border-top:2px solid #ccc;}
