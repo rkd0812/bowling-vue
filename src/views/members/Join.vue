@@ -2,6 +2,7 @@
   <div>
     <sub-title title="회원가입"></sub-title>
     <section>
+      <form @submit.prevent="validateForm()">
       <div class="form-vertical join">
         <div class="form-group">
           <label class="control-label col-4"><span class="text-danger">*</span> 이메일</label>
@@ -93,17 +94,24 @@
           <label class="control-label col-4"><span class="text-danger">*</span> 모바일</label>
           <div class="col-8 connect">
             <input type="text"
+                   name="phoneNum"
                    class="form-control"
                    v-model="phoneNum1"
                    v-validate="'required'"> -
             <input type="text"
+                   name="phoneNum"
                    class="form-control"
                    v-model="phoneNum2"
                    v-validate="'required'"> -
             <input type="text"
+                   name="phoneNum"
                    class="form-control"
                    v-model="phoneNum3"
                    v-validate="'required'">
+            <span
+              class="text-danger text-small"
+              v-show="errors.has('phoneNum')">
+              <i class="fa fa-times"></i> 모바일 번호를 입력해주세요.</span>
           </div>
         </div>
       </div>
@@ -120,6 +128,7 @@
           <a href="#" class="naver">N</a>
         </div>
       </div>
+      </form>
     </section>
   </div>
 
@@ -149,32 +158,25 @@ export default {
       domain: '',
     };
   },
-  methods: {
-    checkPassword(pw) {
-      const num = pw.search(/[0-9]/g);
-      const engLo = pw.search(/[a-z]/g);
-      const engUp = pw.search(/[A-Z]/g);
-      const spe = pw.search(/[`~!@@#$%^&*|₩₩₩'₩";:₩/?]/gi);
-
-      if (pw.length < 8 || pw.length > 20) {
-        this.errMsgPw = true;
-      } else if (pw.search(/\s/) !== -1) {
-        this.errMsgPw = true;
-      } else if (num < 0 || engLo < 0 || spe < 0 || engUp < 0) {
-        this.errMsgPw = true;
-      } else {
-        this.errMsgPw = false;
-      }
+  watch: {
+    phoneNum1() {
+      this.phoneNum1 = this.phoneNum1.replace(/[^0-9]/g, '');
     },
-    checkPasswordMatch() {
-      if (this.errMsgPw) return;
-      if (this.password_confirmation !== this.password) {
-        this.errMsgPwConfirm = true;
-        this.msgPwConfirm = false;
-      } else {
-        this.errMsgPwConfirm = false;
-        this.msgPwConfirm = true;
-      }
+    phoneNum2() {
+      this.phoneNum2 = this.phoneNum2.replace(/[^0-9]/g, '');
+    },
+    phoneNum3() {
+      this.phoneNum3 = this.phoneNum3.replace(/[^0-9]/g, '');
+    },
+  },
+  methods: {
+    validateForm() {
+      this.$validator.validateAll().then((result) => {
+        if (result) {
+          // eslint-disable-next-line
+          alert('회원가입이 완료되었습니다.');
+        }
+      });
     },
   },
 };
