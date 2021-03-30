@@ -48,7 +48,8 @@
                    type="password"
                    class="form-control"
                    v-model="password"
-                   v-validate="'required'"
+                   v-validate="{ required: true,
+regex: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,20}/ }"
                    ref="password">
             <span
               class="text-danger text-small"
