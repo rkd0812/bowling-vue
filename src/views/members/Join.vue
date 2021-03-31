@@ -2,6 +2,7 @@
   <div>
     <sub-title title="회원가입"></sub-title>
     <section>
+      <form @submit.prevent="validateForm()">
       <div class="form-vertical join">
         <div class="form-group">
           <label class="control-label col-4"><span class="text-danger">*</span> 이메일</label>
@@ -9,12 +10,32 @@
             <input
               type="text"
               class="form-control"
+              v-validate="'required'"
+              name="email"
               v-model="email"> @
-            <select class="form-control">
-              <option>직접입력</option>
-              <option>gmail.com</option>
-              <option>naver.com</option>
+            <select class="form-control"
+                    name="domain"
+                    ref="domain"
+                    v-model="domain"
+                    validate>
+              <option value="other">직접입력</option>
+              <option value="gmail">gmail.com</option>
+              <option value="naver">naver.com</option>
             </select>
+            <input name="domain2"
+                   type="text"
+                   class="form-control"
+                   data-vv-as="domain"
+                   v-validate="'required_if:domain,other'"
+                   v-if="this.domain==='other'" >
+            <span class="text-danger text-small"
+                  v-show="errors.has('email')">
+              <i class="fa fa-times"></i> 이메일을 입력하세요.
+            </span>
+            <span v-show="errors.has('domain2')"
+                  class="text-danger text-small">
+              <i class="fa fa-times"></i> 이메일을 직접 입력해주세요.
+            </span>
             <span class="text-info text-small">
               <i class="fa fa-check"></i> 사용할 수 있는 이메일 입니다.
             </span>
@@ -23,12 +44,16 @@
         <div class="form-group">
           <label class="control-label col-4"><span class="text-danger">*</span> 비밀번호</label>
           <div class="col-8">
-            <input type="password"
+            <input name="password"
+                   type="password"
                    class="form-control"
-                   v-model="password1">
+                   v-model="password"
+                   v-validate="{ required: true,
+regex: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,20}/ }"
+                   ref="password">
             <span
               class="text-danger text-small"
-              v-show="errMsgPw"><i class="fa fa-times"></i>
+              v-show="errors.has('password')"><i class="fa fa-times"></i>
               비밀번호는 특수문자, 소문자, 숫자를 이용하여 8자 ~ 20자 이내로 작성하여 주세요.
             </span>
           </div>
@@ -36,13 +61,15 @@
         <div class="form-group">
           <label class="control-label col-4"><span class="text-danger">*</span> 비밀번호 확인</label>
           <div class="col-8">
-            <input type="password"
+            <input name="password_confirmation"
+                   type="password"
                    class="form-control"
-                   v-model="password2"
-                   v-bind:disabled="this.errMsgPw">
+                   v-model="password_confirmation"
+                   v-validate="'required|confirmed:password'"
+                   data-vv-as="password">
             <span
               class="text-danger text-small"
-              v-show="errMsgPwConfirm">
+              v-show="errors.has('password_confirmation')">
               <i class="fa fa-times"></i> 비밀번호를 확인하세요</span>
             <span
               class="text-info text-small"
@@ -54,21 +81,38 @@
         <div class="form-group">
           <label class="control-label col-4"><span class="text-danger">*</span> 사용자명</label>
           <div class="col-8">
-            <input type="text" class="form-control">
+            <input name="name"
+                   type="text"
+                   class="form-control"
+                   v-validate="'required'">
+            <span
+              class="text-danger text-small"
+              v-show="errors.has('name')">
+              <i class="fa fa-times"></i> 사용자명을 입력해주세요</span>
           </div>
         </div>
         <div class="form-group">
           <label class="control-label col-4"><span class="text-danger">*</span> 모바일</label>
           <div class="col-8 connect">
             <input type="text"
+                   name="phoneNum"
                    class="form-control"
-                   v-model="phoneNum1"> -
+                   v-model="phoneNum1"
+                   v-validate="'required'"> -
             <input type="text"
+                   name="phoneNum"
                    class="form-control"
-                   v-model="phoneNum2"> -
+                   v-model="phoneNum2"
+                   v-validate="'required'"> -
             <input type="text"
+                   name="phoneNum"
                    class="form-control"
-                   v-model="phoneNum3">
+                   v-model="phoneNum3"
+                   v-validate="'required'">
+            <span
+              class="text-danger text-small"
+              v-show="errors.has('phoneNum')">
+              <i class="fa fa-times"></i> 모바일 번호를 입력해주세요.</span>
           </div>
         </div>
       </div>
@@ -85,6 +129,7 @@
           <a href="#" class="naver">N</a>
         </div>
       </div>
+      </form>
     </section>
   </div>
 
@@ -103,24 +148,18 @@ export default {
   data() {
     return {
       email: '',
-      password1: '',
-      password2: '',
+      password: '',
+      password_confirmation: '',
       errMsgPw: true,
       errMsgPwConfirm: false,
       msgPwConfirm: false,
       phoneNum1: null,
       phoneNum2: null,
       phoneNum3: null,
+      domain: '',
     };
   },
   watch: {
-    password1(value) {
-      this.checkPassword(value);
-      this.checkPasswordMatch();
-    },
-    password2() {
-      this.checkPasswordMatch();
-    },
     phoneNum1() {
       this.phoneNum1 = this.phoneNum1.replace(/[^0-9]/g, '');
     },
@@ -132,31 +171,13 @@ export default {
     },
   },
   methods: {
-    checkPassword(pw) {
-      const num = pw.search(/[0-9]/g);
-      const engLo = pw.search(/[a-z]/g);
-      const engUp = pw.search(/[A-Z]/g);
-      const spe = pw.search(/[`~!@@#$%^&*|₩₩₩'₩";:₩/?]/gi);
-
-      if (pw.length < 8 || pw.length > 20) {
-        this.errMsgPw = true;
-      } else if (pw.search(/\s/) !== -1) {
-        this.errMsgPw = true;
-      } else if (num < 0 || engLo < 0 || spe < 0 || engUp < 0) {
-        this.errMsgPw = true;
-      } else {
-        this.errMsgPw = false;
-      }
-    },
-    checkPasswordMatch() {
-      if (this.errMsgPw) return;
-      if (this.password2 !== this.password1) {
-        this.errMsgPwConfirm = true;
-        this.msgPwConfirm = false;
-      } else {
-        this.errMsgPwConfirm = false;
-        this.msgPwConfirm = true;
-      }
+    validateForm() {
+      this.$validator.validateAll().then((result) => {
+        if (result) {
+          // eslint-disable-next-line
+          alert('회원가입이 완료되었습니다.');
+        }
+      });
     },
   },
 };

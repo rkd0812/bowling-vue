@@ -102,11 +102,11 @@ export default {
         return true;
       }
 
-      this.errors = [];
+      /* this.errors = [];
 
       if (!this.title) {
         this.errors.push('Name required.');
-      }
+      } */
 
       e.preventDefault();
     },

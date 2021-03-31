@@ -9,13 +9,14 @@ import './assets/css/layout.css';
 // import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 import Vue from 'vue';
+import VeeValidate from 'vee-validate';
 import App from './App.vue';
 import router from './router';
 import store from './store';
 
 // library.add(faUserSecret);
 // Vue.component('font-awesome-icon', FontAwesomeIcon);
-
+Vue.use(VeeValidate);
 Vue.config.productionTip = false;
 
 new Vue({
